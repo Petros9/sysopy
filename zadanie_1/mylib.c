@@ -9,35 +9,38 @@ const int SIZE = 10000;
 array_of_blocks *initialise_array(int size)
 {
     array_of_blocks *main_array = (array_of_blocks *)calloc(1, sizeof(array_of_blocks));
-    main_array->blocks_number = size;
+    main_array->blocks_number = 0;
     main_array->blocks = (block **)calloc(size, sizeof(block *));
     return main_array;
 }
 
 
 
-pairs *make_pairs(char sequence[])
-{                                               
-    char sequence_copy[strlen(sequence)];
-    strcpy(sequence_copy, sequence);
 
+
+pairs *make_pairs(char sequence[])
+{    
+    char sequence_copy[strlen(sequence)];
+    strcpy(sequence_copy, sequence); // copy string so we will use that later
+
+                                 
     int number_of_files = 1;
     for(int i = 0; i<strlen(sequence);i++)
     {
         if(sequence[i] == ' ' || sequence[i] == ':')
         {
-            number_of_files++;
+          number_of_files++;
         }
     }
-    number_of_files /= 2; // tu bardziej sprawdzamy liczbę par plików, które będziemy porównywać
+
+    number_of_files /=2; // tu bardziej sprawdzamy liczbę par plików, które będziemy porównywać
 
     pairs *pair_seq = calloc(1, sizeof(pairs));
     pair_seq->files_number = number_of_files;
     pair_seq->files = calloc(number_of_files, sizeof(char **));
-
-    // start putting filenames into result array
-    char *file_name = strtok(sequence, " :");
+    char *file_name = strtok(sequence_copy, " :");
     int i = 0;
+    
     while (file_name != NULL)
     { // init space for row
         pair_seq->files[i] = calloc(2, sizeof(char *));
@@ -58,10 +61,9 @@ pairs *make_pairs(char sequence[])
 
 }
 
-void calculate_diff(pairs *files)
+void do_diff(pairs *files)
 {
     char ***files_pairs = files->files;
-
     for (int i = 0; i < files->files_number; i++)
     {
         char **curr_pair = files_pairs[i];
@@ -91,7 +93,6 @@ void calculate_diff(pairs *files)
         system(diff_command);
         free(tmp_file_name);
         free(touch_command);
-        free(diff_command);
     }
 }
 
@@ -193,9 +194,9 @@ void delete_block(array_of_blocks *main_array, int index)
         block *spec_block = main_array->blocks[index];
         for (int i = 0; i < spec_block->operations_number; i++)
         {
-            if(spec_block->diff_result[i] != NULL) // bo mogliśmy operację wcześniej usunąć
+           if(spec_block->diff_result[i] != NULL) // bo mogliśmy operację wcześniej usunąć
             {
-                delete_operation(spec_block, i);
+              delete_operation(spec_block, i);
             }
         }
         free(main_array->blocks[index]);
