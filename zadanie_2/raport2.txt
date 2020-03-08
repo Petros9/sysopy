@@ -1,0 +1,10 @@
+
+Dla tworzenia tablicy jednoelementowej;
+Porównania plików a.txt i b.txt;
+Usunięcia jednej operacji;
+Usuniecia jednego bloku;
+
+:
+[REAL_TIME] Executing main.c took 0.010000s
+[USER_TIME] Executing main.c took 0.000000s
+[SYSTEM_TIME] Executing main.c took 0.000000s
