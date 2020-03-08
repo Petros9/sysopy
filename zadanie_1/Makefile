@@ -1,11 +1,11 @@
-CC = gcc -Wall -std=c11 -ggdb
+CC = gcc -Wall
 
 
 all: static shared clean
 
 static:
 	$(CC) -c mylib.c
-	ar rcs mylib.a mlib.o
+	ar rcs mylib.a mylib.o
 
 shared:
 	$(CC) -c -fPIC mylib.c

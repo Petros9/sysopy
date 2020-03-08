@@ -61,7 +61,7 @@ pairs *make_pairs(char sequence[])
 
 }
 
-void do_diff(pairs *files)
+void do_diff(pairs *files, array_of_blocks *main_array)
 {
     char ***files_pairs = files->files;
     for (int i = 0; i < files->files_number; i++)
@@ -91,9 +91,11 @@ void do_diff(pairs *files)
         strcat(diff_command, tmp_file_name);
 
         system(diff_command);
+        create_block(tmp_file_name, main_array);
         free(tmp_file_name);
         free(touch_command);
     }
+    //może jeszcze zwracać listę nazw plików tymczasowych TODO
 }
 
 
@@ -113,16 +115,14 @@ void create_block(char *file_name, array_of_blocks *main_array)
     char *line = NULL;
     char **line_collector = (char **)calloc(SIZE, sizeof(char *)); // file text
     
-    size_t _ = 0; 
-    while (getline(&line, &_, result) != -1)
+    size_t len = 0; 
+    while(getline(&line, &len, result) != -1)
     {
         line_collector[line_number] = calloc(SIZE, sizeof(char));
         strcpy(line_collector[line_number], "");
         strcat(line_collector[line_number], line);
         line_number++;
     }
-
-
     //zamyka i usuwa plik tymczasowy
     fclose(result);
     char *rm_command = calloc(1, strlen(file_name) + 3);
@@ -160,7 +160,6 @@ void create_block(char *file_name, array_of_blocks *main_array)
 
     new_block->operations_number = operations_quant;
     new_block->diff_result = operations;
-
 
     int index = 0;
     while (main_array->blocks[index] != NULL && index < main_array->blocks_number)
