@@ -10,16 +10,17 @@
 array_of_blocks *exec_initialise_array(char *size_as_string)
 {
     int size = (int)strtol(size_as_string, NULL, 10);
+    size++;
     array_of_blocks *new_main_array =initialise_array(size);
     return new_main_array;
 }
 
-void exec_make_pairs(char *files_as_chars)
+void exec_make_pairs(char *files_as_chars, array_of_blocks *main_array)
 {
     int str_size = strlen(files_as_chars);
     char files_str[str_size];
     strcpy(files_str, files_as_chars);
-    do_diff(make_pairs(files_str));
+    do_diff(make_pairs(files_str), main_array);
 }
 
 void exec_create_block(char *file_name, array_of_blocks *main_array)
@@ -77,11 +78,11 @@ int main(int args_num, char *args[])
         // START TIME
         real_time[0] = times(tms_time[0]);
 
-        main_array = exec_initialise_array("1");
-        exec_make_pairs("a.txt:b.txt"); 
-        exec_create_block("a.txt:b.txt", main_array);
-        exec_delete_operation(main_array,"0","1");
-        exec_delete_block(main_array,"0");
+        main_array = exec_initialise_array("3");
+        
+        exec_make_pairs("lamba.txt:beta.txt a.txt:b.txt c.txt:cprim.txt", main_array); 
+        //exec_delete_operation(main_array,"0","1");
+
 
         real_time[1] = times(tms_time[1]);
         //printf("[REAL_TIME] Executing action %s took %fs\n", command, calculate_time(real_time[0], real_time[1]));

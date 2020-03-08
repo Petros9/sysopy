@@ -4,7 +4,33 @@ Porównania plików a.txt i b.txt;
 Usunięcia jednej operacji;
 Usuniecia jednego bloku;
 
-:
 [REAL_TIME] Executing main.c took 0.010000s
 [USER_TIME] Executing main.c took 0.000000s
 [SYSTEM_TIME] Executing main.c took 0.000000s
+
+Porównanie bardzo podobnych plików (i utworzenie talbicy):
+
+REAL_TIME] Executing main.c took 0.010000s
+[USER_TIME] Executing main.c took 0.000000s
+[SYSTEM_TIME] Executing main.c took 0.000000s
+
+Podobnie jak wyżej dla dwóch kompletnie róznych plików:
+
+[REAL_TIME] Executing main.c took 0.020000s
+[USER_TIME] Executing main.c took 0.000000s
+[SYSTEM_TIME] Executing main.c took 0.000000s
+
+
+Dla wszystkich trzech plikow:
+
+[REAL_TIME] Executing main.c took 0.030000s
+[USER_TIME] Executing main.c took 0.000000s
+[SYSTEM_TIME] Executing main.c took 0.000000s
+
+
+
+
+
+
+
+
