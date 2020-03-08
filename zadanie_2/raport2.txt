@@ -28,6 +28,31 @@ Dla wszystkich trzech plikow:
 [SYSTEM_TIME] Executing main.c took 0.000000s
 
 
+Automatycznie:
+
+[piotrswiderski@localhost moze]$ ./main initialise_array 1 make_pairs a.txt:b.txt 
+[REAL_TIME] Executing action initialise_array took 0.000000s
+[USER_TIME] Executing action initialise_array took 0.000000s
+[SYSTEM_TIME] Executing action initialise_array took 0.000000s
+[REAL_TIME] Executing action make_pairs took 0.020000s
+[USER_TIME] Executing action make_pairs took 0.000000s
+[SYSTEM_TIME] Executing action make_pairs took 0.000000s
+[REAL_TIME] Executing main.c took 0.020000s
+[USER_TIME] Executing main.c took 0.000000s
+[SYSTEM_TIME] Executing main.c took 0.000000s
+[piotrswiderski@localhost moze]$ ./main initialise_array 2 make_pairs "a.txt:b.txt c.txt cprim.txt"
+[REAL_TIME] Executing action initialise_array took 0.000000s
+[USER_TIME] Executing action initialise_array took 0.000000s
+[SYSTEM_TIME] Executing action initialise_array took 0.000000s
+[REAL_TIME] Executing action make_pairs took 0.020000s
+[USER_TIME] Executing action make_pairs took 0.000000s
+[SYSTEM_TIME] Executing action make_pairs took 0.000000s
+[REAL_TIME] Executing main.c took 0.020000s
+[USER_TIME] Executing main.c took 0.000000s
+[SYSTEM_TIME] Executing main.c took 0.000000s
+
+
+
 
 
 
