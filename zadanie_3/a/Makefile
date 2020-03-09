@@ -18,9 +18,6 @@ dynamic:
 	$(CC) -c -fPIC mylib.c
 	$(CC) main.c -o main -L. -ldl -D DLL
 
-clean:
-	rm -f *.o
-
 cleanAll:
 	rm -f *.o *.a *.so *.ddl
 
