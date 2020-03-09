@@ -1,0 +1,265 @@
+make[1]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make cleanAll
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+rm -f *.o *.a *.so *.ddl
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make static
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make cleanAll
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+rm -f *.o *.a *.so *.ddl
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+gcc -Wall -c mylib.c
+ar rcs mylib.a mylib.o
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+gcc -Wall -o main main.c mylib.a -I .
+make tests
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make little_diffrence
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "c.txt:cprim.txt" delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.010000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.010000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make default_diffrence
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "a.txt:b.txt" delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.010000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.010000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make many_files
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 3 make_pairs "a.txt:b.txt c.txt:cprim.txt" delete_block 0 
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.020000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.020000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make complex
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "a.txt:b.txt" delete_operation 0 0 delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.010000s
+[USER_TIME] Function delete_operation lasted for 0.000000s
+[SYSTEM_TIME] Function delete_operation lasted for 0.000000s
+[REAL_TIME] Function delete_operation lasted for 0.000000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.010000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[1]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[1]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+#new block
+#new block
+#new block
+make cleanAll
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+rm -f *.o *.a *.so *.ddl
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make shared
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make cleanAll
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+rm -f *.o *.a *.so *.ddl
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+gcc -Wall -c -fPIC mylib.c
+gcc -Wall -shared -fPIC -o mylib.so mylib.o
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+#gcc -Wall -o main main.c -L. mylib.so -I .
+make tests
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make little_diffrence
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "c.txt:cprim.txt" delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.000000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.000000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make default_diffrence
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "a.txt:b.txt" delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.010000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.010000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make many_files
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 3 make_pairs "a.txt:b.txt c.txt:cprim.txt" delete_block 0 
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.020000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.020000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make complex
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "a.txt:b.txt" delete_operation 0 0 delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.010000s
+[USER_TIME] Function delete_operation lasted for 0.000000s
+[SYSTEM_TIME] Function delete_operation lasted for 0.000000s
+[REAL_TIME] Function delete_operation lasted for 0.000000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.010000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[1]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[1]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+#new block
+#new block
+#new block
+make cleanAll
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+rm -f *.o *.a *.so *.ddl
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make dynamic
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make cleanAll
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+rm -f *.o *.a *.so *.ddl
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+gcc -Wall -c -fPIC mylib.c
+gcc -Wall main.c -o main -L. -ldl -D DLL
+#gcc -Wall -dynamic -fPIC -o mylib.ddl mylib.o
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+gcc -Wall -o main main.c
+make tests
+make[2]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+make little_diffrence
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "c.txt:cprim.txt" delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.000000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.000000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make default_diffrence
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "a.txt:b.txt" delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.000000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.000000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make many_files
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 3 make_pairs "a.txt:b.txt c.txt:cprim.txt" delete_block 0 
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.020000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.020000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make complex
+make[3]: Wejście do katalogu '/home/piotrswiderski/sysopy/lab_1'
+./main initialise_array 1 make_pairs "a.txt:b.txt" delete_operation 0 0 delete_block 0
+[USER_TIME] Function initialise_array lasted for 0.000000s
+[SYSTEM_TIME] Function initialise_array lasted for 0.000000s
+[REAL_TIME] Function initialise_array lasted for 0.000000s
+[USER_TIME] Function make_pairs lasted for 0.000000s
+[SYSTEM_TIME] Function make_pairs lasted for 0.000000s
+[REAL_TIME] Function make_pairs lasted for 0.010000s
+[USER_TIME] Function delete_operation lasted for 0.000000s
+[SYSTEM_TIME] Function delete_operation lasted for 0.000000s
+[REAL_TIME] Function delete_operation lasted for 0.000000s
+[USER_TIME] Function delete_block lasted for 0.000000s
+[SYSTEM_TIME] Function delete_block lasted for 0.000000s
+[REAL_TIME] Function delete_block lasted for 0.000000s
+[USER_TIME] The whole programme lasted for 0.000000s
+[SYSTEM_TIME] The whole programme lasted for 0.000000s
+[REAL_TIME] The whole programme lasted for 0.010000s
+make[3]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[2]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
+make[1]: Opuszczenie katalogu '/home/piotrswiderski/sysopy/lab_1'
