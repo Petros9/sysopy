@@ -4,7 +4,7 @@
 #include <string.h>
 
 
-const int SIZE = 10000;
+const int SIZE = 10000000;
 
 array_of_blocks *initialise_array(int size)
 {
@@ -13,10 +13,6 @@ array_of_blocks *initialise_array(int size)
     main_array->blocks = (block **)calloc(size, sizeof(block *));
     return main_array;
 }
-
-
-
-
 
 pairs *make_pairs(char sequence[])
 {    
@@ -42,23 +38,21 @@ pairs *make_pairs(char sequence[])
     int i = 0;
     
     while (file_name != NULL)
-    { // init space for row
+    {
         pair_seq->files[i] = calloc(2, sizeof(char *));
-        // enter first name
+        // nazwa pierwszego pliku
 
         pair_seq->files[i][0] = calloc(1, strlen(file_name));
         strcpy(pair_seq->files[i][0], file_name);
         file_name = strtok(NULL, " :");
 
-        // enter second name
+        // nazwa drugiego pliku
         pair_seq->files[i][1] = calloc(1, strlen(file_name));
         strcpy(pair_seq->files[i][1], file_name);
         file_name = strtok(NULL, " :");
         i++;
     }
     return pair_seq;
-
-
 }
 
 void do_diff(pairs *files, array_of_blocks *main_array)
@@ -70,7 +64,6 @@ void do_diff(pairs *files, array_of_blocks *main_array)
 
 
         char *tmp_file_name = calloc(1, strlen(curr_pair[0]) + strlen(curr_pair[1]) + 2);
-
         strcpy(tmp_file_name, curr_pair[0]);
         strcat(tmp_file_name, ":");
         strcat(tmp_file_name, curr_pair[1]);
@@ -95,7 +88,6 @@ void do_diff(pairs *files, array_of_blocks *main_array)
         free(tmp_file_name);
         free(touch_command);
     }
-    //może jeszcze zwracać listę nazw plików tymczasowych TODO
 }
 
 
@@ -114,7 +106,7 @@ void create_block(char *file_name, array_of_blocks *main_array)
     int operations_quant = 0;
     char *line = NULL;
     char **line_collector = (char **)calloc(SIZE, sizeof(char *)); // file text
-    
+
     size_t len = 0; 
     while(getline(&line, &len, result) != -1)
     {
@@ -124,13 +116,15 @@ void create_block(char *file_name, array_of_blocks *main_array)
         line_number++;
     }
     //zamyka i usuwa plik tymczasowy
+    rewind(result);
     fclose(result);
+    free(line);
+
+
     char *rm_command = calloc(1, strlen(file_name) + 3);
     strcpy(rm_command, "rm ");
     strcat(rm_command, file_name);
     system(rm_command);
-    free(line);
-
 
     block *new_block = calloc(1, sizeof(block));
     char **operations = calloc(line_number, sizeof(char *));
