@@ -17,7 +17,6 @@ dynamic:
 	make cleanAll
 	$(CC) -c -fPIC mylib.c
 	$(CC) main.c -o main -L. -ldl -D DLL
-	#$(CC) -dynamic -fPIC -o mylib.ddl mylib.o
 
 clean:
 	rm -f *.o
@@ -37,7 +36,6 @@ shared_3a:
 	#new block
 	make cleanAll
 	make shared
-	#$(CC) -o main main.c -L. mylib.so -I .
 	make tests
 dynamic_3a:
 	#new block
@@ -70,6 +68,5 @@ complex:
 test_all:
 	make static_3a >> result.txt
 	make shared_3a >> result.txt
-	make dynamic_3a >> result.txt
 	make dynamic_3a >> result.txt
 	make cleanAll
