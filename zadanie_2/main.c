@@ -49,23 +49,24 @@ double calculate_time(clock_t start, clock_t end)
 
 int main(int args_num, char *args[])
 {
-    
+    FILE *raport = fopen("result.txt", "a+");
+
+
     array_of_blocks *main_array;
     int i = 1;
-
     // mierzenie czasu
-    struct tms **program_time = calloc(2, sizeof(struct tms *));
+    struct tms **program_time = calloc(2, sizeof(struct tms));
     clock_t real_time_program[2];
     for (int j = 0; j < 2; j++)
     {
-        program_time[j] = (struct tms *)calloc(1, sizeof(struct tms *));
+        program_time[j] = (struct tms *)calloc(1, sizeof(struct tms));
     }
     real_time_program[0] = times(program_time[0]);
     struct tms **tms_time = calloc(2, sizeof(struct tms *));
     clock_t real_time[2];
     for (int j = 0; j < 2; j++)
     {
-        tms_time[j] = (struct tms *)calloc(1, sizeof(struct tms *));
+        tms_time[j] = (struct tms *)calloc(1, sizeof(struct tms));
     }
 
 while (i < args_num)
@@ -78,45 +79,43 @@ while (i < args_num)
         if (strcmp(command, "initialise_array") == 0)
         {
             main_array = exec_initialise_array(args[i + 1]);
-            i += 2;
+            i+=2;
         }
         else if (strcmp(command, "make_pairs") == 0)
         {
             exec_make_pairs(args[i + 1], main_array);
-            i += 2;
+            i+=2;
         }
         else if (strcmp(command, "operationss_number") == 0)
         {
-            int number = exec_operationss_number(main_array, args[i+1]);
-            i += 2;
+            printf("%d", exec_operationss_number(main_array, args[i+1]));
+            i+=2;
         }
         else if (strcmp(command, "delete_block") == 0)
         {
             exec_delete_block(main_array,args[i+1]);
-            i += 2;
+            i+=2;
         }
         else if (strcmp(command, "delete_operation") == 0)
         {
             exec_delete_operation(main_array,args[i + 1], args[i + 2]);
-            i += 3;
+            i+=3;
         }
         else
         {
             i++;
         }
         real_time[1] = times(tms_time[1]);
-        printf("[REAL_TIME] Executing action %s took %fs\n", command, calculate_time(real_time[0], real_time[1]));
-        printf("[USER_TIME] Executing action %s took %fs\n", command, calculate_time(tms_time[0]->tms_utime, tms_time[1]->tms_utime));
-        printf("[SYSTEM_TIME] Executing action %s took %fs\n", command, calculate_time(tms_time[0]->tms_stime, tms_time[1]->tms_stime));
+        fprintf(raport,"[USER_TIME] Function %s lasted for %fs\n", command, calculate_time(tms_time[0]->tms_utime, tms_time[1]->tms_utime));
+        fprintf(raport,"[SYSTEM_TIME] Function %s lasted for %fs\n", command, calculate_time(tms_time[0]->tms_stime, tms_time[1]->tms_stime));
+        fprintf(raport,"[REAL_TIME] Function %s lasted for %fs\n", command, calculate_time(real_time[0], real_time[1]));
     }
     real_time_program[1] = times(program_time[1]);
-    printf("[REAL_TIME] Executing main.c took %fs\n", calculate_time(real_time_program[0], real_time[1]));
-    printf("[USER_TIME] Executing main.c took %fs\n", calculate_time(program_time[0]->tms_utime, program_time[1]->tms_utime));
-    printf("[SYSTEM_TIME] Executing main.c took %fs\n", calculate_time(program_time[0]->tms_stime, program_time[1]->tms_stime));
+    fprintf(raport,"[USER_TIME] The whole programme lasted for %fs\n", calculate_time(program_time[0]->tms_utime, program_time[1]->tms_utime));
+    fprintf(raport,"[SYSTEM_TIME] The whole programme lasted for %fs\n", calculate_time(program_time[0]->tms_stime, program_time[1]->tms_stime));
+    fprintf(raport,"[REAL_TIME] The whole programme lasted for %fs\n", calculate_time(real_time_program[0], real_time[1]));
+    fclose(raport);
+    //free(real_time_program);
+    //free(real_time);
     return 0;
 }
-        //real_time[0] = times(tms_time[0]);
-
-        //main_array = exec_initialise_array("3");
-        //exec_make_pairs("lamba.txt:beta.txt a.txt:b.txt c.txt:cprim.txt", main_array); 
-        //exec_delete_operation(main_array,"0","1");
