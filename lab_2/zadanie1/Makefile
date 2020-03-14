@@ -9,18 +9,18 @@ compile:
 test:
 
 	#sekcja 1 bajta
-	touch test1_kopia_1.txt
-	touch test1_kopia_2.txt	
+	#touch test1_kopia_1.txt
+	#touch test1_kopia_2.txt	
 		# generacja
-		./main generate test1_1.txt 100 1 generate test1_2.txt 1000 1
+	#	./main generate test1_1.txt 100 1 generate test1_2.txt 1000 1
 		# kopiowanie
-		./main copy_sys test1_1.txt test1_kopia_1.txt 100 1
-		./main copy_lib test1_2.txt test1_kopia_2.txt 1000 1		
+	#	./main copy_sys test1_1.txt test1_kopia_1.txt 100 1
+	#	./main copy_lib test1_2.txt test1_kopia_2.txt 1000 1		
 		#sortowanie
-		./main sort_sys test1_kopia_1.txt 100 1
-		./main sort_sys test1_kopia_2.txt 1000 1
-		./main sort_lib test1_1.txt 100 1
-		./main sort_lib test1_2.txt 1000 1				
+	#	./main sort_sys test1_kopia_1.txt 100 1
+	#	./main sort_sys test1_kopia_2.txt 1000 1
+	#	./main sort_lib test1_1.txt 100 1
+	#	./main sort_lib test1_2.txt 1000 1				
 	#sekcja 4 bajtów
 	touch test4_kopia_1.txt
 	touch test4_kopia_2.txt	

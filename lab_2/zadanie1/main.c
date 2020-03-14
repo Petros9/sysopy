@@ -61,7 +61,6 @@ void generate(char* new_file_name, char* records_number, char* record_length){ /
     free(generate_command);
 }
 
-
 void swap_sys(int desc, int first, int second, int record_length)
 {
     char* first_record = calloc(record_length+1, sizeof(char));
@@ -205,6 +204,7 @@ void sort_lib(char* file_name, char* records_number, char* record_length){
 
 
 
+
 void copy_sys(char* first_file, char* second_file, int records_number, int record_length){
 
     int desc1 = open(first_file, O_RDONLY);
@@ -283,7 +283,7 @@ int main(int args_num, char* args[])
 
         else if(strcmp(args[i], "sort_sys") == 0){
             times(tms[curr]);
-            sort_sys(args[i+1], args[i+2], args[i+3]);
+            sort_sys(args[i+1], atoi(args[i+2]), atoi(args[i+3]));
             times(tms[curr+1]);
             fprintf(result, "To sort with system functions %s records of length %s bytes took:\n", args[i+2], args[i+3]);
             print_time_diffrence(tms[curr], tms[curr+1], result);
@@ -294,7 +294,7 @@ int main(int args_num, char* args[])
         else if(strcmp(args[i], "sort_lib") == 0){
             
             times(tms[curr]);
-            sort_lib(args[i+1], args[i+2], args[i+3]);
+            sort_lib(args[i+1], atoi(args[i+2]), atoi(args[i+3]);
             times(tms[curr+1]);
             fprintf(result, "To sort with library functions %s records of length %s bytes took:\n", args[i+2], args[i+3]);
             print_time_diffrence(tms[curr], tms[curr+1], result);

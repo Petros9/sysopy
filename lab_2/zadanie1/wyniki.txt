@@ -94,3 +94,149 @@ To sort with library functions 10000 records of length 8192 bytes took:
  USER_TIME:  59.540000 SYSTEM_TIME:  72.940000
 To sort with library functions 7000 records of length 8192 bytes took:
  USER_TIME:  27.730000 SYSTEM_TIME:  34.610000
+To generate 100 records of length 1 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 1000 records of length 1 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 100 records of length 1 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 1000 records of length 1 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 100 records of length 1 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 1000 records of length 1 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 100 records of length 1 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 1000 records of length 1 bytes took:
+ USER_TIME:  0.150000 SYSTEM_TIME:  0.060000
+To generate 1000 records of length 4 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10000 records of length 4 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 10000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.140000 SYSTEM_TIME:  0.080000
+To sort with library functions 10000 records of length 4 bytes took:
+ USER_TIME:  14.490000 SYSTEM_TIME:  7.320000
+To generate 300 records of length 512 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 1000 records of length 512 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 300 records of length 512 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 1000 records of length 512 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 300 records of length 512 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.010000
+To sort with system functions 1000 records of length 512 bytes took:
+ USER_TIME:  0.010000 SYSTEM_TIME:  0.010000
+To sort with library functions 300 records of length 512 bytes took:
+ USER_TIME:  0.010000 SYSTEM_TIME:  0.000000
+To sort with library functions 1000 records of length 512 bytes took:
+ USER_TIME:  1.080000 SYSTEM_TIME:  1.130000
+To generate 1000 records of length 1024 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 5000 records of length 1024 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 1000 records of length 1024 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 5000 records of length 1024 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 1000 records of length 1024 bytes took:
+ USER_TIME:  0.240000 SYSTEM_TIME:  0.240000
+To sort with system functions 5000 records of length 1024 bytes took:
+ USER_TIME:  0.270000 SYSTEM_TIME:  0.250000
+To sort with library functions 1000 records of length 1024 bytes took:
+ USER_TIME:  0.140000 SYSTEM_TIME:  0.080000
+To sort with library functions 5000 records of length 1024 bytes took:
+ USER_TIME:  3.560000 SYSTEM_TIME:  1.850000
+To generate 2000 records of length 4096 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 1000 records of length 4096 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 2000 records of length 4096 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 1000 records of length 4096 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 2000 records of length 4096 bytes took:
+ USER_TIME:  4.100000 SYSTEM_TIME:  6.530000
+To sort with system functions 1000 records of length 4096 bytes took:
+ USER_TIME:  4.150000 SYSTEM_TIME:  6.660000
+To sort with library functions 2000 records of length 4096 bytes took:
+ USER_TIME:  1.660000 SYSTEM_TIME:  1.760000
+To sort with library functions 1000 records of length 4096 bytes took:
+ USER_TIME:  0.450000 SYSTEM_TIME:  0.400000
+To generate 10000 records of length 8192 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 7000 records of length 8192 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 10000 records of length 8192 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.050000
+To copy with library functions 7000 records of length 8192 bytes took:
+ USER_TIME:  0.010000 SYSTEM_TIME:  0.040000
+To sort with system functions 10000 records of length 8192 bytes took:
+ USER_TIME:  17.060000 SYSTEM_TIME:  36.760000
+To sort with system functions 7000 records of length 8192 bytes took:
+ USER_TIME:  16.970000 SYSTEM_TIME:  36.520000
+To sort with library functions 10000 records of length 8192 bytes took:
+ USER_TIME:  55.790000 SYSTEM_TIME:  61.820000
+To sort with library functions 7000 records of length 8192 bytes took:
+ USER_TIME:  27.060000 SYSTEM_TIME:  30.680000
+To generate 1000 records of length 4 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10000 records of length 4 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 10000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.150000 SYSTEM_TIME:  0.080000
+To sort with library functions 10000 records of length 4 bytes took:
+ USER_TIME:  14.560000 SYSTEM_TIME:  7.700000
+To generate 300 records of length 512 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 1000 records of length 512 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with system functions 300 records of length 512 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To copy with library functions 1000 records of length 512 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 300 records of length 512 bytes took:
+ USER_TIME:  0.010000 SYSTEM_TIME:  0.020000
+To sort with system functions 1000 records of length 512 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.010000
+To sort with library functions 300 records of length 512 bytes took:
+ USER_TIME:  0.010000 SYSTEM_TIME:  0.000000
+To sort with library functions 1000 records of length 512 bytes took:
+ USER_TIME:  0.150000 SYSTEM_TIME:  0.090000
+To generate 1000 records of length 1024 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 5000 records of length 1024 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.160000 SYSTEM_TIME:  0.070000
+To sort with library functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.020000
+To sort with library functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.060000 SYSTEM_TIME:  0.090000
+To sort with library functions 1000 records of length 5 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.030000
+To sort with library functions 1000 records of length 4 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.030000
+To sort with system functions 1000 records of length 512 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.020000
