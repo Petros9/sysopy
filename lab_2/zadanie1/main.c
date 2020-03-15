@@ -61,21 +61,24 @@ void generate(char* new_file_name, char* records_number, char* record_length){ /
     free(generate_command);
 }
 
-void swap_sys(int desc, int first, int second, int record_length)
+
+
+void swap_sys(int desc, int first_row, int second_row, int record_length)
 {
-    char* first_record = calloc(record_length+1, sizeof(char));
-    char* second_record = calloc(record_length+1, sizeof(char));
+    char* first_record = (char*)calloc(record_length, sizeof(char));
+    char* second_record = (char*)calloc(record_length, sizeof(char));
 
-    lseek(desc, (record_length+1)*first, 0);
-    read(desc, first_record, record_length+1);
-    lseek(desc, (record_length+1)*second, 0);
-    read(desc, second_record, record_length+1);
+    lseek(desc, (record_length+1)*first_row, 0);
+    read(desc, first_record, record_length);
 
-    lseek(desc, (record_length+1)*second, 0);
-    write(desc, first_record, record_length+1);
+    lseek(desc, (record_length+1)*second_row, 0);
+    read(desc, second_record, record_length);
 
-    lseek(desc, (record_length+1)*first, 0);
-    write(desc, second_record, record_length+1);
+    lseek(desc, (record_length+1)*second_row, 0);
+    write(desc, first_record, record_length);
+
+    lseek(desc, (record_length+1)*first_row, 0);
+    write(desc, second_record, record_length);
 
     free(first_record);
     free(second_record);
@@ -83,15 +86,17 @@ void swap_sys(int desc, int first, int second, int record_length)
 
 int partition_sys (int desc, int p, int r, int record_length)
 {
-    char* pivot = calloc(record_length+1, sizeof(char));
+    char* pivot = (char*)calloc(record_length, sizeof(char));
     lseek(desc, (record_length+1)*r, 0);
-    read(desc, pivot, record_length+1);
+    read(desc, pivot, record_length);
+
     int i = p-1;
-    char* potential_swap = calloc(record_length+1, sizeof(char));
+    char* potential_swap = (char*)calloc(record_length, sizeof(char));
+
     for(int j = p; j<r; j++)
     {
         lseek(desc, (record_length+1)*j, 0);
-        read(desc, potential_swap, record_length+1);
+        read(desc, potential_swap, record_length);
 
         if(strcmp(potential_swap, pivot)<0){
             i++;
@@ -116,6 +121,8 @@ void quick_sort_sys(int desc, int p, int r, int record_length)
     }
 }
 
+
+
 void sort_sys(char* file_name, char* records_number, char* record_length){
 
     int desc = open(file_name, O_RDWR);
@@ -130,23 +137,22 @@ void sort_sys(char* file_name, char* records_number, char* record_length){
 }
 
 
-
-void swap_lib(FILE* sort_file, int first, int second, int record_length)
+void swap_lib(FILE* sort_file, int first_row, int second_row, int record_length)
 {
-    char* first_record = calloc(record_length+1, sizeof(char));
-    char* second_record = calloc(record_length+1, sizeof(char));
+    char* first_record = (char*)calloc(record_length, sizeof(char));
+    char* second_record = (char*)calloc(record_length, sizeof(char));
 
-    fseek(sort_file, (record_length + 1)*first, 0);
-    fread(first_record, sizeof(char), record_length+1, sort_file);
+    fseek(sort_file, (record_length + 1)*first_row, 0);
+    fread(first_record, 1, record_length, sort_file);
 
-    fseek(sort_file, (record_length+1)*second, 0);
-    fread(second_record, sizeof(char), record_length+1, sort_file);
+    fseek(sort_file, (record_length+1)*second_row, 0);
+    fread(second_record, 1, record_length, sort_file);
 
-	fseek(sort_file, (record_length+1)*second, 0);
-	fwrite(first_record, sizeof(char), record_length+1 ,sort_file);
+	fseek(sort_file, (record_length+1)*second_row, 0);
+	fwrite(first_record, 1, record_length ,sort_file);
 
-	fseek(sort_file, (record_length+1)*first, 0);
-	fwrite(second_record, sizeof(char), record_length+1, sort_file);
+	fseek(sort_file, (record_length+1)*first_row, 0);
+	fwrite(second_record, 1, record_length, sort_file);
 
     free(first_record);
     free(second_record);
@@ -154,15 +160,15 @@ void swap_lib(FILE* sort_file, int first, int second, int record_length)
 
 int partition_lib(FILE* sort_file, int p, int r, int record_length)
 {
-    char* pivot = calloc(record_length+1, sizeof(char));
-    fseek(sort_file, (record_length)*r, 0);
-    fread(pivot, sizeof(char), record_length+1, sort_file);
+    char* pivot = (char*)calloc(record_length, sizeof(char));
+    fseek(sort_file, (record_length+1)*r, 0);
+    fread(pivot, 1, record_length, sort_file);
     int i = p-1;
-    char* potential_swap = calloc(record_length+1, sizeof(char));
+    char* potential_swap = (char*)calloc(record_length+1, sizeof(char));
     for(int j = p; j<r; j++)
     {
-        fseek(sort_file, record_length+1, 0);
-        fread(potential_swap, sizeof(char), record_length+1, sort_file);
+        fseek(sort_file, (record_length+1)*j, 0);
+        fread(potential_swap,1, record_length, sort_file);
 
         if(strcmp(potential_swap,pivot)<0){
             i++;
@@ -186,6 +192,7 @@ void quick_sort_lib(FILE* sort_file, int p, int r, int record_length)
     }
 }
 
+
 void sort_lib(char* file_name, char* records_number, char* record_length){
 
     FILE* file = fopen(file_name, "r+"); // do czytania i nadpisywania
@@ -201,16 +208,12 @@ void sort_lib(char* file_name, char* records_number, char* record_length){
 
 
 
-
-
-
-
 void copy_sys(char* first_file, char* second_file, int records_number, int record_length){
 
     int desc1 = open(first_file, O_RDONLY);
     int desc2 = open(second_file, O_WRONLY);
 
-    if(desc1 == -1 || desc2 == -2){
+    if(desc1 == -1 || desc2 == -1){
         printf("%s", "Wrong file names");
         exit(1);
     }
@@ -268,7 +271,6 @@ int main(int args_num, char* args[])
 
     int i = 1;
     int curr = 0;
-
     while(i < args_num)
     {
         if(strcmp(args[i], "generate") == 0){
@@ -283,7 +285,7 @@ int main(int args_num, char* args[])
 
         else if(strcmp(args[i], "sort_sys") == 0){
             times(tms[curr]);
-            sort_sys(args[i+1], atoi(args[i+2]), atoi(args[i+3]));
+            sort_sys(args[i+1], args[i+2], args[i+3]);
             times(tms[curr+1]);
             fprintf(result, "To sort with system functions %s records of length %s bytes took:\n", args[i+2], args[i+3]);
             print_time_diffrence(tms[curr], tms[curr+1], result);
@@ -294,12 +296,12 @@ int main(int args_num, char* args[])
         else if(strcmp(args[i], "sort_lib") == 0){
             
             times(tms[curr]);
-            sort_lib(args[i+1], atoi(args[i+2]), atoi(args[i+3]);
+            sort_lib(args[i+1], args[i+2], args[i+3]);
             times(tms[curr+1]);
             fprintf(result, "To sort with library functions %s records of length %s bytes took:\n", args[i+2], args[i+3]);
             print_time_diffrence(tms[curr], tms[curr+1], result);
             i = i + 5;
-            curr = curr + 2;              
+            curr = curr + 2;           
         }
 
         else if(strcmp(args[i], "copy_sys") == 0){
@@ -322,6 +324,9 @@ int main(int args_num, char* args[])
             print_time_diffrence(tms[curr], tms[curr+1],result);
             i = i + 6;
             curr = curr + 2;            
+        }
+        else{
+            i++;
         }        
     }
 }

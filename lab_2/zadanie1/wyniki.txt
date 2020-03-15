@@ -240,3 +240,77 @@ To sort with library functions 1000 records of length 4 bytes took:
  USER_TIME:  0.020000 SYSTEM_TIME:  0.030000
 To sort with system functions 1000 records of length 512 bytes took:
  USER_TIME:  0.020000 SYSTEM_TIME:  0.020000
+To generate 4 records of length 4 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 4 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 4 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 3 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 3 records of length 4 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 10 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 10 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 10 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 20 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 10 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10 records of length 20 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 20 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10 records of length 20 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 20 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 10 records of length 20 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 20 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 10 records of length 20 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10 records of length 20 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 20 records of length 10 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 20 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 20 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 20 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 10 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 10 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 10 records of length 10 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 10 records of length 10 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 100 records of length 100 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with system functions 100 records of length 100 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 100 records of length 100 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.040000
+To generate 100 records of length 100 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 100 records of length 100 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.020000
+To sort with system functions 100 records of length 100 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To generate 100 records of length 100 bytes:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000
+To sort with library functions 100 records of length 100 bytes took:
+ USER_TIME:  0.020000 SYSTEM_TIME:  0.020000
+To sort with library functions 100 records of length 100 bytes took:
+ USER_TIME:  0.000000 SYSTEM_TIME:  0.000000

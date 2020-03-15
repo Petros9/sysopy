@@ -8,20 +8,27 @@
 
 
 char* file_type(mode_t mode) { //ok
-    if(S_ISREG(mode))
+    if(S_ISREG(mode)){
         return "file";
-    if(S_ISDIR(mode))
+    }
+    if(S_ISDIR(mode)){
         return "dir";
-    if(S_ISCHR(mode))
+    }
+    if(S_ISCHR(mode)){
         return "char dev";
-    if(S_ISBLK(mode))
+    }
+    if(S_ISBLK(mode)){
         return "block dev";
-    if(S_ISFIFO(mode))
+    }
+    if(S_ISFIFO(mode)){
         return "fifo";
-    if(S_ISLNK(mode))
+    }
+    if(S_ISLNK(mode)){
         return "slink";
-    if(S_ISSOCK(mode))
+    }
+    if(S_ISSOCK(mode)){
         return "sock";
+    }
     return "unknown";
 }
 
