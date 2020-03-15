@@ -33,11 +33,11 @@ void print_file_info(char* PATH, struct stat* info){ //ok
 
     char access_date[24];
     strftime(access_date, sizeof(access_date), "%d %m %Y %H:%M", localtime(&info->st_atime));    
-    printf("\t LAST ACCESS DATE: %s\n", access_date); // data ostatniego dostępu
+    printf("LAST ACCESS DATE: %s\n", access_date); // data ostatniego dostępu
 
     char modification_date[24];
     strftime(modification_date, sizeof(modification_date), "%d %m %Y %H:%M", localtime(&info->st_mtime));
-    printf("\t LAST MODIFICATION DATE: %s\n", modification_date); //data ostatniej modyfikacji
+    printf("LAST MODIFICATION DATE: %s\n", modification_date); //data ostatniej modyfikacji
 }
 int day_diff(time_t date) {
     return difftime(time(NULL), date) / 86400;
@@ -150,7 +150,6 @@ void find_function(char* PATH, int curr_depth, int max_depth, char* a_command, c
         printf("%s", "That dirent is empty");
         exit(1);
     }
-
     struct dirent* sub_files;
     char sub_PATH[100];
     while((sub_files = readdir(dirent))!=NULL){
