@@ -1,0 +1,3 @@
+Proces PID: 7623, wykonał 1 mnożeń macierzy
+Proces PID: 7624, wykonał 1 mnożeń macierzy
+Proces PID: 7625, wykonał 1 mnożeń macierzy

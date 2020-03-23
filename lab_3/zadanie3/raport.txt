@@ -1,0 +1,15 @@
+Proces PID: 12775, wykonał 1 mnożeń macierzy
+User CPU time used: 222 microseconds
+System CPU time used: 0 microseconds
+Maximum resident set size: 212 KB
+
+Proces PID: 12776, wykonał 1 mnożeń macierzy
+User CPU time used: 233 microseconds
+System CPU time used: 0 microseconds
+Maximum resident set size: 212 KB
+
+Proces PID: 12777, wykonał 1 mnożeń macierzy
+User CPU time used: 461 microseconds
+System CPU time used: 0 microseconds
+Maximum resident set size: 212 KB
+
