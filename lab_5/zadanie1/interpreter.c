@@ -8,11 +8,6 @@
 
 #define TOP_LIMIT 3
 
-void error(char * msg){
-    perror(msg);
-    exit(EXIT_FAILURE);
-}
-
 char** get_arguments(char* arg_line){
     char** args = NULL;
     char dividers[2] = {' ', '\n'};
@@ -29,15 +24,15 @@ char** get_arguments(char* arg_line){
     return args;
 }
 
-int executeLine(char * arg_line){
+int execute_commands(char * arg_line){
 
     int proc_numbec = 0;
     int fd[2][2];
-    char * comands[TOP_LIMIT];
+    char * commands[TOP_LIMIT];
     arg_line = strtok(arg_line, "|");
     while (arg_line){
         if(proc_numbec != TOP_LIMIT){
-            comands[proc_numbec++] = arg_line;
+            commands[proc_numbec++] = arg_line;
         }
         arg_line = strtok(NULL, "|");
     }
@@ -54,7 +49,7 @@ int executeLine(char * arg_line){
         pipe(fd[i % 2]);
 
         if (fork() == 0){
-            char ** args = get_arguments(comands[i]);
+            char ** args = get_arguments(commands[i]);
 
             if (i != proc_numbec - 1){
                 close(fd[i % 2][0]);
@@ -93,7 +88,7 @@ int main(int arg_num, char** args){
 
     while((reader = getline(&arg_line, &_, command_file)) != -1){
         if(vfork() == 0){
-            executeLine(arg_line);
+            execute_commands(arg_line);
         }else{
             wait(NULL);
         }
